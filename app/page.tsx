@@ -69,10 +69,10 @@ export default function HardinContracting() {
       {/* Fixed Call Button */}
       <button
         onClick={openPhone}
-        className="fixed bottom-8 right-8 z-50 bg-[#CD7F32] hover:bg-[#B8860B] text-white font-bold py-4 px-6 rounded-lg transition-all shadow-lg hover:shadow-2xl flex items-center gap-2 group"
+        className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 z-50 bg-[#CD7F32] hover:bg-[#B8860B] text-white font-bold py-3 px-4 sm:py-4 sm:px-6 rounded-lg transition-all shadow-lg hover:shadow-2xl flex items-center gap-2 group"
       >
-        <Phone size={20} className="group-hover:scale-110 transition-transform" />
-        <span className="hidden sm:inline">256-905-5232</span>
+        <Phone size={18} className="group-hover:scale-110 transition-transform" />
+        <span className="hidden sm:inline text-sm sm:text-base">256-905-5232</span>
       </button>
 
       {/* ===== 1. HERO SECTION ===== */}
@@ -129,10 +129,10 @@ export default function HardinContracting() {
       </section>
 
       {/* ===== 2. SERVICES SPLIT SECTION ===== */}
-      <section id="services" className="w-full bg-[#0A0A0A] py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+      <section id="services" className="w-full bg-[#0A0A0A] py-16 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto">
           {/* FENCING */}
-          <div className="bg-gradient-to-b from-[#1E1E1E] to-[#0A0A0A] border-r-2 border-[#CD7F32] p-8 sm:p-12">
+          <div className="bg-gradient-to-b from-[#1E1E1E] to-[#0A0A0A] lg:border-r-2 lg:border-[#CD7F32] p-8 sm:p-12">
             <h3 className="text-4xl sm:text-5xl font-bold text-[#CD7F32] mb-8 text-center">FENCING</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
@@ -189,12 +189,12 @@ export default function HardinContracting() {
             Professional installations across Athens, Madison County & Decatur
           </p>
 
-          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+          <div className="flex justify-center gap-2 sm:gap-4 mb-12 flex-wrap">
             {["All", "Split Rail Fencing", "Wood Gates", "Roof Framing", "Roof Installation", "Roof Materials"].map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold text-sm sm:text-lg transition-all ${
+                className={`px-3 py-2 sm:px-5 sm:py-3 rounded-lg font-bold text-xs sm:text-sm md:text-lg transition-all whitespace-nowrap ${
                   activeCategory === category
                     ? "bg-[#CD7F32] text-white border-2 border-[#CD7F32]"
                     : "bg-transparent text-[#CD7F32] border-2 border-[#CD7F32] hover:bg-[#CD7F32] hover:text-white"
@@ -316,11 +316,11 @@ export default function HardinContracting() {
         <div className="max-w-5xl mx-auto">
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#CD7F32]">Meet the Founder</h3>
 
-          <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8 sm:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 sm:p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               {/* Founder Image */}
               <div className="flex justify-center">
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-lg overflow-hidden border-2 border-[#CD7F32]">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-lg overflow-hidden border-2 border-[#CD7F32]">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fb0ceac0ba35043d391ca9de683e114b6%2F0adb3a221c7f40999ad9ebd0b2188775?format=webp&width=800"
                     alt="Jonathan Hardin - Founder"
@@ -372,21 +372,21 @@ export default function HardinContracting() {
             </div>
 
             {/* Carousel controls */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2 sm:gap-4">
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-3 rounded-full transition-all"
+                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-2 sm:p-3 rounded-full transition-all flex-shrink-0"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={18} className="sm:w-5 sm:h-5" />
               </button>
 
-              <div className="flex gap-2">
+              <div className="flex gap-1 sm:gap-2">
                 {testimonials.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrentTestimonial(i)}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      i === currentTestimonial ? "bg-[#CD7F32] w-6" : "bg-gray-600"
+                      i === currentTestimonial ? "bg-[#CD7F32] w-4 sm:w-6" : "bg-gray-600"
                     }`}
                   />
                 ))}
@@ -394,9 +394,9 @@ export default function HardinContracting() {
 
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
-                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-3 rounded-full transition-all"
+                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-2 sm:p-3 rounded-full transition-all flex-shrink-0"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={18} className="sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
@@ -409,32 +409,32 @@ export default function HardinContracting() {
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-[#CD7F32]">Get Your Free Estimate</h3>
           <p className="text-center text-gray-400 mb-12 text-lg">Contact us today for a no-obligation consultation</p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Contact Form */}
-            <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8">
-              <form action="https://formsubmit.co/Hardinscontracting@gmail.com" method="POST" className="space-y-4">
+            <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 sm:p-8">
+              <form action="https://formsubmit.co/Hardinscontracting@gmail.com" method="POST" className="space-y-3 sm:space-y-4">
                 <input
                   type="text"
                   name="name"
                   placeholder="Your Name"
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
                 <input
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email Address"
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
-                <select name="service" className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all" required>
+                <select name="service" className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base" required>
                   <option value="">Select Service</option>
                   <option value="fencing">Fencing</option>
                   <option value="roofing">Roofing</option>
@@ -444,18 +444,18 @@ export default function HardinContracting() {
                   type="text"
                   name="zipcode"
                   placeholder="Zip Code"
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
                 <textarea
                   name="message"
                   placeholder="Tell us about your project"
                   rows={4}
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all resize-none"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all resize-none text-sm sm:text-base"
                 />
                 <button
                   type="submit"
-                  className="w-full bg-[#B8860B] hover:bg-[#CD7F32] text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105"
+                  className="w-full bg-[#B8860B] hover:bg-[#CD7F32] text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all transform hover:scale-105 text-sm sm:text-base"
                 >
                   Send Message
                 </button>
@@ -463,40 +463,40 @@ export default function HardinContracting() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Quick Contact Cards */}
               <div
-                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
+                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-4 sm:p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
                 onClick={openPhone}
               >
-                <div className="flex items-center gap-4">
-                  <Phone className="text-[#CD7F32]" size={32} />
-                  <div>
-                    <p className="text-gray-400 text-sm">Call Us</p>
-                    <p className="font-bold text-white text-lg">256-905-5232</p>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Phone className="text-[#CD7F32] flex-shrink-0" size={28} className="sm:w-8 sm:h-8" />
+                  <div className="min-w-0">
+                    <p className="text-gray-400 text-xs sm:text-sm">Call Us</p>
+                    <p className="font-bold text-white text-sm sm:text-lg break-all">256-905-5232</p>
                   </div>
                 </div>
               </div>
 
               <div
-                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
+                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-4 sm:p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
                 onClick={openEmail}
               >
-                <div className="flex items-center gap-4">
-                  <Mail className="text-[#CD7F32]" size={32} />
-                  <div>
-                    <p className="text-gray-400 text-sm">Email Us</p>
-                    <p className="font-bold text-white text-lg">Jthardin624@gmail.com</p>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Mail className="text-[#CD7F32] flex-shrink-0" size={28} className="sm:w-8 sm:h-8" />
+                  <div className="min-w-0">
+                    <p className="text-gray-400 text-xs sm:text-sm">Email Us</p>
+                    <p className="font-bold text-white text-xs sm:text-lg break-all">Jthardin624@gmail.com</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="text-[#CD7F32] flex-shrink-0 mt-1" size={32} />
-                  <div>
-                    <p className="text-gray-400 text-sm mb-2">Service Areas</p>
-                    <p className="font-bold text-white text-lg leading-relaxed">
+              <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-4 sm:p-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <MapPin className="text-[#CD7F32] flex-shrink-0 mt-1" size={28} className="sm:w-8 sm:h-8" />
+                  <div className="min-w-0">
+                    <p className="text-gray-400 text-xs sm:text-sm mb-2">Service Areas</p>
+                    <p className="font-bold text-white text-sm sm:text-lg leading-relaxed">
                       Athens, AL
                       <br />
                       Madison County, AL
@@ -514,15 +514,15 @@ export default function HardinContracting() {
       {/* ===== 8. FOOTER ===== */}
       <footer className="w-full bg-[#1E1E1E] border-t-2 border-[#CD7F32] py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
             <div className="text-center md:text-left">
-              <h4 className="font-bold text-[#CD7F32] mb-2">HARDIN CONTRACTING</h4>
-              <p className="text-gray-400 text-sm">Premium Roofing & Fencing</p>
+              <h4 className="font-bold text-[#CD7F32] mb-2 text-sm sm:text-base">HARDIN CONTRACTING</h4>
+              <p className="text-gray-400 text-xs sm:text-sm">Premium Roofing & Fencing</p>
             </div>
             <div className="text-center">
               <button
                 onClick={openPhone}
-                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-sm transition-all"
+                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-xs sm:text-sm transition-all break-all"
               >
                 256-905-5232
               </button>
@@ -530,14 +530,14 @@ export default function HardinContracting() {
             <div className="text-center md:text-right">
               <button
                 onClick={openEmail}
-                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-sm transition-all"
+                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-xs sm:text-sm transition-all break-all"
               >
                 Jthardin624@gmail.com
               </button>
             </div>
           </div>
-          <div className="border-t border-[#CD7F32] pt-8">
-            <p className="text-center text-gray-500 text-sm">
+          <div className="border-t border-[#CD7F32] pt-6 md:pt-8">
+            <p className="text-center text-gray-500 text-xs sm:text-sm">
               © 2025 Hardin Contracting. Licensed & Insured. All Rights Reserved. | Serving Athens • Madison County •
               Decatur, AL
             </p>
