@@ -346,7 +346,7 @@ export default function HardinContracting() {
         </div>
       </section>
 
-      {/* ===== 5. TESTIMONIALS CAROUSEL ===== */}
+      {/* ===== 6. TESTIMONIALS CAROUSEL ===== */}
       <section id="testimonials" className="w-full bg-gradient-to-b from-[#0A0A0A] to-[#1E1E1E] py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#B8860B]">What Our Clients Say</h3>
