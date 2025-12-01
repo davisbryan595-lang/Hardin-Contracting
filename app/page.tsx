@@ -463,40 +463,40 @@ export default function HardinContracting() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Quick Contact Cards */}
               <div
-                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
+                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-4 sm:p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
                 onClick={openPhone}
               >
-                <div className="flex items-center gap-4">
-                  <Phone className="text-[#CD7F32]" size={32} />
-                  <div>
-                    <p className="text-gray-400 text-sm">Call Us</p>
-                    <p className="font-bold text-white text-lg">256-905-5232</p>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Phone className="text-[#CD7F32] flex-shrink-0" size={28} className="sm:w-8 sm:h-8" />
+                  <div className="min-w-0">
+                    <p className="text-gray-400 text-xs sm:text-sm">Call Us</p>
+                    <p className="font-bold text-white text-sm sm:text-lg break-all">256-905-5232</p>
                   </div>
                 </div>
               </div>
 
               <div
-                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
+                className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-4 sm:p-6 hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all cursor-pointer"
                 onClick={openEmail}
               >
-                <div className="flex items-center gap-4">
-                  <Mail className="text-[#CD7F32]" size={32} />
-                  <div>
-                    <p className="text-gray-400 text-sm">Email Us</p>
-                    <p className="font-bold text-white text-lg">Jthardin624@gmail.com</p>
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Mail className="text-[#CD7F32] flex-shrink-0" size={28} className="sm:w-8 sm:h-8" />
+                  <div className="min-w-0">
+                    <p className="text-gray-400 text-xs sm:text-sm">Email Us</p>
+                    <p className="font-bold text-white text-xs sm:text-lg break-all">Jthardin624@gmail.com</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="text-[#CD7F32] flex-shrink-0 mt-1" size={32} />
-                  <div>
-                    <p className="text-gray-400 text-sm mb-2">Service Areas</p>
-                    <p className="font-bold text-white text-lg leading-relaxed">
+              <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-4 sm:p-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <MapPin className="text-[#CD7F32] flex-shrink-0 mt-1" size={28} className="sm:w-8 sm:h-8" />
+                  <div className="min-w-0">
+                    <p className="text-gray-400 text-xs sm:text-sm mb-2">Service Areas</p>
+                    <p className="font-bold text-white text-sm sm:text-lg leading-relaxed">
                       Athens, AL
                       <br />
                       Madison County, AL
