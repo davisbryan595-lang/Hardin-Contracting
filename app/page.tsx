@@ -511,7 +511,7 @@ export default function HardinContracting() {
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
+      {/* ===== 8. FOOTER ===== */}
       <footer className="w-full bg-[#1E1E1E] border-t-2 border-[#CD7F32] py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
