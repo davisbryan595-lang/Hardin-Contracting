@@ -190,11 +190,11 @@ export default function HardinContracting() {
           </p>
 
           <div className="flex justify-center gap-4 mb-12 flex-wrap">
-            {["All", "Fencing", "Roofing"].map((category) => (
+            {["All", "Split Rail Fencing", "Wood Gates", "Roof Framing", "Roof Installation", "Roof Materials"].map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-3 rounded-lg font-bold text-lg transition-all ${
+                className={`px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold text-sm sm:text-lg transition-all ${
                   activeCategory === category
                     ? "bg-[#CD7F32] text-white border-2 border-[#CD7F32]"
                     : "bg-transparent text-[#CD7F32] border-2 border-[#CD7F32] hover:bg-[#CD7F32] hover:text-white"
