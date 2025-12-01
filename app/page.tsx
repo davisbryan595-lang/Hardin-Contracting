@@ -129,10 +129,10 @@ export default function HardinContracting() {
       </section>
 
       {/* ===== 2. SERVICES SPLIT SECTION ===== */}
-      <section id="services" className="w-full bg-[#0A0A0A] py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+      <section id="services" className="w-full bg-[#0A0A0A] py-16 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto">
           {/* FENCING */}
-          <div className="bg-gradient-to-b from-[#1E1E1E] to-[#0A0A0A] border-r-2 border-[#CD7F32] p-8 sm:p-12">
+          <div className="bg-gradient-to-b from-[#1E1E1E] to-[#0A0A0A] lg:border-r-2 lg:border-[#CD7F32] p-8 sm:p-12">
             <h3 className="text-4xl sm:text-5xl font-bold text-[#CD7F32] mb-8 text-center">FENCING</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
