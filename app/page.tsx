@@ -409,9 +409,9 @@ export default function HardinContracting() {
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-[#CD7F32]">Get Your Free Estimate</h3>
           <p className="text-center text-gray-400 mb-12 text-lg">Contact us today for a no-obligation consultation</p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Contact Form */}
-            <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8">
+            <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 sm:p-8">
               <form action="https://formsubmit.co/Hardinscontracting@gmail.com" method="POST" className="space-y-4">
                 <input
                   type="text"
