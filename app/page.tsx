@@ -403,7 +403,7 @@ export default function HardinContracting() {
         </div>
       </section>
 
-      {/* ===== 6. CONTACT SECTION ===== */}
+      {/* ===== 7. CONTACT SECTION ===== */}
       <section id="contact" className="w-full bg-[#0A0A0A] py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-[#CD7F32]">Get Your Free Estimate</h3>
