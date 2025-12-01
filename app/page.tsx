@@ -11,6 +11,7 @@ export default function HardinContracting() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isAutoScroll, setIsAutoScroll] = useState(true)
+  const [activeCategory, setActiveCategory] = useState("All")
 
   const testimonials = [
     {
@@ -188,15 +189,70 @@ export default function HardinContracting() {
             Professional installations across Athens, Madison County & Decatur
           </p>
 
+          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            {["All", "Split Rail Fencing", "Wood Gates", "Roof Framing", "Roof Installation", "Roof Materials"].map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold text-sm sm:text-lg transition-all ${
+                  activeCategory === category
+                    ? "bg-[#CD7F32] text-white border-2 border-[#CD7F32]"
+                    : "bg-transparent text-[#CD7F32] border-2 border-[#CD7F32] hover:bg-[#CD7F32] hover:text-white"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Modern Vinyl Fencing", type: "Fencing", image: "/modern-vinyl-fencing-installation.jpg" },
-              { title: "Complete Roof Replacement", type: "Roofing", image: "/professional-roof-replacement-project.jpg" },
-              { title: "Custom Wood Privacy Fence", type: "Fencing", image: "/custom-wood-privacy-fence.jpg" },
-              { title: "New Shingle Installation", type: "Roofing", image: "/professional-shingle-roof-installation.jpg" },
-              { title: "Metal Fencing System", type: "Fencing", image: "/modern-metal-fence-system.jpg" },
-              { title: "Metal Roof Installation", type: "Roofing", image: "/professional-metal-roof-installation.jpg" },
-            ].map((project, i) => (
+              { title: "Premium Split Rail Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0071.jpg" },
+              { title: "Roof Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0075.jpg" },
+              { title: "Wooden Gate", type: "Wood Gates", image: "/hardingallery2/IMG-20251202-WA0074.jpg" },
+              { title: "Shingle Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0080.jpg" },
+              { title: "White Rail Fence", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0090.jpg" },
+              { title: "Roof Framing Project", type: "Roof Framing", image: "/hardingallery2/IMG-20251202-WA0097.jpg" },
+              { title: "Split Rail Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0072.jpg" },
+              { title: "Roof Material Preparation", type: "Roof Materials", image: "/hardingallery2/IMG-20251202-WA0098.jpg" },
+              { title: "Quality Split Rail", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0073.jpg" },
+              { title: "New Roof Construction", type: "Roof Framing", image: "/hardingallery2/IMG-20251202-WA0099.jpg" },
+              { title: "Residential Fence", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0074.jpg" },
+              { title: "Finished Roofing", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0100.jpg" },
+              { title: "Fence Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0076.jpg" },
+              { title: "Professional Roof Work", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0101.jpg" },
+              { title: "Rail Fence Design", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0077.jpg" },
+              { title: "Completed Roof Project", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0102.jpg" },
+              { title: "Durable Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0078.jpg" },
+              { title: "Roof Installation Work", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0103.jpg" },
+              { title: "Quality Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0079.jpg" },
+              { title: "New Roofing", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0104.jpg" },
+              { title: "Residential Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0081.jpg" },
+              { title: "Roof Completion", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0105.jpg" },
+              { title: "Professional Fence Work", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0082.jpg" },
+              { title: "Custom Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0083.jpg" },
+              { title: "Expert Fencing Services", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0084.jpg" },
+              { title: "Premium Fence Work", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0085.jpg" },
+              { title: "Quality Fence Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0086.jpg" },
+              { title: "Professional Fencing Design", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0087.jpg" },
+              { title: "Reliable Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0088.jpg" },
+              { title: "Fencing Solutions", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0089.jpg" },
+              { title: "Expert Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0091.jpg" },
+              { title: "Fence Project", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0092.jpg" },
+              { title: "Wood Gate Installation", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0093.jpg" },
+              { title: "Custom Gate", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0094.jpg" },
+              { title: "Premium Gate Design", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0095.jpg" },
+              { title: "Gate Construction", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0096.jpg" },
+              { title: "Roofing Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0097.jpg" },
+              { title: "Roof Work", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0098.jpg" },
+              { title: "Expert Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0099.jpg" },
+              { title: "Professional Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0100.jpg" },
+              { title: "Shingle Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0101.jpg" },
+              { title: "Roof Framing Work", type: "Roof Framing", image: "/hardingallery1/IMG-20251202-WA0102.jpg" },
+              { title: "Roofing Project", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0103.jpg" },
+              { title: "Roof Services", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0104.jpg" },
+              { title: "Complete Roof Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0105.jpg" },
+            ].filter((project) => activeCategory === "All" || project.type === activeCategory).map((project, i) => (
               <div
                 key={i}
                 className="group overflow-hidden rounded-lg border-2 border-[#CD7F32] hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all"
@@ -255,7 +311,42 @@ export default function HardinContracting() {
         </div>
       </section>
 
-      {/* ===== 5. TESTIMONIALS CAROUSEL ===== */}
+      {/* ===== 5. FOUNDER SECTION ===== */}
+      <section className="w-full bg-[#0A0A0A] py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#CD7F32]">Meet the Founder</h3>
+
+          <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8 sm:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Founder Image */}
+              <div className="flex justify-center">
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-lg overflow-hidden border-2 border-[#CD7F32]">
+                  <Image
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fb0ceac0ba35043d391ca9de683e114b6%2F0adb3a221c7f40999ad9ebd0b2188775?format=webp&width=800"
+                    alt="Jonathan Hardin - Founder"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Founder Info */}
+              <div>
+                <h4 className="text-3xl sm:text-4xl font-bold text-[#CD7F32] mb-4">Jonathan Hardin</h4>
+                <p className="text-[#B8860B] font-semibold text-lg mb-4">Founder & Owner</p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  With over 15 years of experience in the construction industry, Jonathan Hardin founded this company with a simple mission: to deliver exceptional quality and professional service to every customer. His dedication to craftsmanship and attention to detail has made Hardin Contracting a trusted name in North Alabama.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  When he's not managing projects, Jonathan stays connected with the community and is committed to ensuring every job exceeds expectations. His commitment to excellence has earned consistent 5-star ratings and the loyalty of hundreds of satisfied customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 6. TESTIMONIALS CAROUSEL ===== */}
       <section id="testimonials" className="w-full bg-gradient-to-b from-[#0A0A0A] to-[#1E1E1E] py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#B8860B]">What Our Clients Say</h3>
@@ -312,7 +403,7 @@ export default function HardinContracting() {
         </div>
       </section>
 
-      {/* ===== 6. CONTACT SECTION ===== */}
+      {/* ===== 7. CONTACT SECTION ===== */}
       <section id="contact" className="w-full bg-[#0A0A0A] py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-4 text-[#CD7F32]">Get Your Free Estimate</h3>
@@ -321,23 +412,29 @@ export default function HardinContracting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8">
-              <form className="space-y-4">
+              <form action="https://formsubmit.co/Hardinscontracting@gmail.com" method="POST" className="space-y-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Phone Number"
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
-                <select className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all">
+                <select name="service" className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all" required>
                   <option value="">Select Service</option>
                   <option value="fencing">Fencing</option>
                   <option value="roofing">Roofing</option>
@@ -345,12 +442,15 @@ export default function HardinContracting() {
                 </select>
                 <input
                   type="text"
+                  name="zipcode"
                   placeholder="Zip Code"
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
                 <textarea
+                  name="message"
                   placeholder="Tell us about your project"
                   rows={4}
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all resize-none"
                 />
                 <button
@@ -411,7 +511,7 @@ export default function HardinContracting() {
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
+      {/* ===== 8. FOOTER ===== */}
       <footer className="w-full bg-[#1E1E1E] border-t-2 border-[#CD7F32] py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
