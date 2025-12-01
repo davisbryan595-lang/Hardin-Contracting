@@ -311,6 +311,41 @@ export default function HardinContracting() {
         </div>
       </section>
 
+      {/* ===== 5. FOUNDER SECTION ===== */}
+      <section className="w-full bg-[#0A0A0A] py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#CD7F32]">Meet the Founder</h3>
+
+          <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8 sm:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Founder Image */}
+              <div className="flex justify-center">
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-lg overflow-hidden border-2 border-[#CD7F32]">
+                  <Image
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fb0ceac0ba35043d391ca9de683e114b6%2F0adb3a221c7f40999ad9ebd0b2188775?format=webp&width=800"
+                    alt="Jonathan Hardin - Founder"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Founder Info */}
+              <div>
+                <h4 className="text-3xl sm:text-4xl font-bold text-[#CD7F32] mb-4">Jonathan Hardin</h4>
+                <p className="text-[#B8860B] font-semibold text-lg mb-4">Founder & Owner</p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  With over 15 years of experience in the construction industry, Jonathan Hardin founded this company with a simple mission: to deliver exceptional quality and professional service to every customer. His dedication to craftsmanship and attention to detail has made Hardin Contracting a trusted name in North Alabama.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  When he's not managing projects, Jonathan stays connected with the community and is committed to ensuring every job exceeds expectations. His commitment to excellence has earned consistent 5-star ratings and the loyalty of hundreds of satisfied customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== 5. TESTIMONIALS CAROUSEL ===== */}
       <section id="testimonials" className="w-full bg-gradient-to-b from-[#0A0A0A] to-[#1E1E1E] py-16 px-4">
         <div className="max-w-4xl mx-auto">
