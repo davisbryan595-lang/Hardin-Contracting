@@ -252,7 +252,7 @@ export default function HardinContracting() {
               { title: "Quality Roofing Work", type: "Roofing", image: "/hardingallery1/IMG-20251202-WA0103.jpg" },
               { title: "Expert Roof Services", type: "Roofing", image: "/hardingallery1/IMG-20251202-WA0104.jpg" },
               { title: "Complete Roofing Solution", type: "Roofing", image: "/hardingallery1/IMG-20251202-WA0105.jpg" },
-            ].map((project, i) => (
+            ].filter((project) => activeCategory === "All" || project.type === activeCategory).map((project, i) => (
               <div
                 key={i}
                 className="group overflow-hidden rounded-lg border-2 border-[#CD7F32] hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all"
