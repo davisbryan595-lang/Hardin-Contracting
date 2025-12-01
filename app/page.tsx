@@ -377,23 +377,29 @@ export default function HardinContracting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8">
-              <form className="space-y-4">
+              <form action="https://formsubmit.co/Hardinscontracting@gmail.com" method="POST" className="space-y-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Phone Number"
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
-                <select className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all">
+                <select name="service" className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all" required>
                   <option value="">Select Service</option>
                   <option value="fencing">Fencing</option>
                   <option value="roofing">Roofing</option>
@@ -401,12 +407,15 @@ export default function HardinContracting() {
                 </select>
                 <input
                   type="text"
+                  name="zipcode"
                   placeholder="Zip Code"
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
                 />
                 <textarea
+                  name="message"
                   placeholder="Tell us about your project"
                   rows={4}
+                  required
                   className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all resize-none"
                 />
                 <button
