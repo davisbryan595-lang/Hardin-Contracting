@@ -372,21 +372,21 @@ export default function HardinContracting() {
             </div>
 
             {/* Carousel controls */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2 sm:gap-4">
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-3 rounded-full transition-all"
+                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-2 sm:p-3 rounded-full transition-all flex-shrink-0"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={18} className="sm:w-5 sm:h-5" />
               </button>
 
-              <div className="flex gap-2">
+              <div className="flex gap-1 sm:gap-2">
                 {testimonials.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrentTestimonial(i)}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      i === currentTestimonial ? "bg-[#CD7F32] w-6" : "bg-gray-600"
+                      i === currentTestimonial ? "bg-[#CD7F32] w-4 sm:w-6" : "bg-gray-600"
                     }`}
                   />
                 ))}
@@ -394,9 +394,9 @@ export default function HardinContracting() {
 
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
-                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-3 rounded-full transition-all"
+                className="bg-[#CD7F32] hover:bg-[#B8860B] text-white p-2 sm:p-3 rounded-full transition-all flex-shrink-0"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={18} className="sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>
