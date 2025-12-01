@@ -316,11 +316,11 @@ export default function HardinContracting() {
         <div className="max-w-5xl mx-auto">
           <h3 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-[#CD7F32]">Meet the Founder</h3>
 
-          <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-8 sm:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 sm:p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               {/* Founder Image */}
               <div className="flex justify-center">
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-lg overflow-hidden border-2 border-[#CD7F32]">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-lg overflow-hidden border-2 border-[#CD7F32]">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2Fb0ceac0ba35043d391ca9de683e114b6%2F0adb3a221c7f40999ad9ebd0b2188775?format=webp&width=800"
                     alt="Jonathan Hardin - Founder"
