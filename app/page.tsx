@@ -412,29 +412,29 @@ export default function HardinContracting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Contact Form */}
             <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 sm:p-8">
-              <form action="https://formsubmit.co/Hardinscontracting@gmail.com" method="POST" className="space-y-4">
+              <form action="https://formsubmit.co/Hardinscontracting@gmail.com" method="POST" className="space-y-3 sm:space-y-4">
                 <input
                   type="text"
                   name="name"
                   placeholder="Your Name"
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
                 <input
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email Address"
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
-                <select name="service" className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all" required>
+                <select name="service" className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base" required>
                   <option value="">Select Service</option>
                   <option value="fencing">Fencing</option>
                   <option value="roofing">Roofing</option>
@@ -444,18 +444,18 @@ export default function HardinContracting() {
                   type="text"
                   name="zipcode"
                   placeholder="Zip Code"
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all text-sm sm:text-base"
                 />
                 <textarea
                   name="message"
                   placeholder="Tell us about your project"
                   rows={4}
                   required
-                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all resize-none"
+                  className="w-full bg-[#0A0A0A] border-2 border-[#CD7F32] text-white placeholder-gray-500 p-2 sm:p-3 rounded-lg focus:outline-none focus:border-[#B8860B] transition-all resize-none text-sm sm:text-base"
                 />
                 <button
                   type="submit"
-                  className="w-full bg-[#B8860B] hover:bg-[#CD7F32] text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105"
+                  className="w-full bg-[#B8860B] hover:bg-[#CD7F32] text-white font-bold py-3 px-4 sm:px-6 rounded-lg transition-all transform hover:scale-105 text-sm sm:text-base"
                 >
                   Send Message
                 </button>
