@@ -69,10 +69,10 @@ export default function HardinContracting() {
       {/* Fixed Call Button */}
       <button
         onClick={openPhone}
-        className="fixed bottom-8 right-8 z-50 bg-[#CD7F32] hover:bg-[#B8860B] text-white font-bold py-4 px-6 rounded-lg transition-all shadow-lg hover:shadow-2xl flex items-center gap-2 group"
+        className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 z-50 bg-[#CD7F32] hover:bg-[#B8860B] text-white font-bold py-3 px-4 sm:py-4 sm:px-6 rounded-lg transition-all shadow-lg hover:shadow-2xl flex items-center gap-2 group"
       >
-        <Phone size={20} className="group-hover:scale-110 transition-transform" />
-        <span className="hidden sm:inline">256-905-5232</span>
+        <Phone size={16} className="sm:size-20 group-hover:scale-110 transition-transform" />
+        <span className="hidden xs:inline text-sm sm:text-base">256-905-5232</span>
       </button>
 
       {/* ===== 1. HERO SECTION ===== */}
