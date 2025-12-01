@@ -189,6 +189,22 @@ export default function HardinContracting() {
             Professional installations across Athens, Madison County & Decatur
           </p>
 
+          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            {["All", "Fencing", "Roofing"].map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-6 py-3 rounded-lg font-bold text-lg transition-all ${
+                  activeCategory === category
+                    ? "bg-[#CD7F32] text-white border-2 border-[#CD7F32]"
+                    : "bg-transparent text-[#CD7F32] border-2 border-[#CD7F32] hover:bg-[#CD7F32] hover:text-white"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Premium Split Rail Fencing", type: "Fencing", image: "/hardingallery1/IMG-20251202-WA0071.jpg" },
