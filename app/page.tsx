@@ -514,15 +514,15 @@ export default function HardinContracting() {
       {/* ===== 8. FOOTER ===== */}
       <footer className="w-full bg-[#1E1E1E] border-t-2 border-[#CD7F32] py-8 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
             <div className="text-center md:text-left">
-              <h4 className="font-bold text-[#CD7F32] mb-2">HARDIN CONTRACTING</h4>
-              <p className="text-gray-400 text-sm">Premium Roofing & Fencing</p>
+              <h4 className="font-bold text-[#CD7F32] mb-2 text-sm sm:text-base">HARDIN CONTRACTING</h4>
+              <p className="text-gray-400 text-xs sm:text-sm">Premium Roofing & Fencing</p>
             </div>
             <div className="text-center">
               <button
                 onClick={openPhone}
-                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-sm transition-all"
+                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-xs sm:text-sm transition-all break-all"
               >
                 256-905-5232
               </button>
@@ -530,14 +530,14 @@ export default function HardinContracting() {
             <div className="text-center md:text-right">
               <button
                 onClick={openEmail}
-                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-sm transition-all"
+                className="text-[#CD7F32] hover:text-[#B8860B] font-bold text-xs sm:text-sm transition-all break-all"
               >
                 Jthardin624@gmail.com
               </button>
             </div>
           </div>
-          <div className="border-t border-[#CD7F32] pt-8">
-            <p className="text-center text-gray-500 text-sm">
+          <div className="border-t border-[#CD7F32] pt-6 md:pt-8">
+            <p className="text-center text-gray-500 text-xs sm:text-sm">
               © 2025 Hardin Contracting. Licensed & Insured. All Rights Reserved. | Serving Athens • Madison County •
               Decatur, AL
             </p>
