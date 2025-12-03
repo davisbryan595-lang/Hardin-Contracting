@@ -12,6 +12,7 @@ export default function HardinContracting() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isAutoScroll, setIsAutoScroll] = useState(true)
   const [activeCategory, setActiveCategory] = useState("All")
+  const [showAllGallery, setShowAllGallery] = useState(false)
 
   const testimonials = [
     {
