@@ -346,6 +346,34 @@ export default function HardinContracting() {
         </div>
       </section>
 
+      {/* ===== 5.5 DAD SECTION ===== */}
+      <section className="w-full bg-[#0A0A0A] py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-[#1E1E1E] border-2 border-[#CD7F32] rounded-lg p-6 sm:p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+              {/* Dad Image */}
+              <div className="flex justify-center">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-lg overflow-hidden border-2 border-[#CD7F32]">
+                  <Image
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fb0ceac0ba35043d391ca9de683e114b6%2Ff3a84e59c45d4864bd399fa55d1b549e?format=webp&width=800"
+                    alt="Dad - Roof Specialist & Partner"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Dad Info */}
+              <div>
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  This is my Dad. He's my roof specialist and partner.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== 6. TESTIMONIALS CAROUSEL ===== */}
       <section id="testimonials" className="w-full bg-gradient-to-b from-[#0A0A0A] to-[#1E1E1E] py-16 px-4">
         <div className="max-w-4xl mx-auto">
