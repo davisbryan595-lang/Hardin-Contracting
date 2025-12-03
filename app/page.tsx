@@ -207,7 +207,86 @@ export default function HardinContracting() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
+            {(() => {
+              const allProjects = [
+                { title: "Premium Split Rail Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0071.jpg" },
+                { title: "Roof Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0075.jpg" },
+                { title: "Wooden Gate", type: "Wood Gates", image: "/hardingallery2/IMG-20251202-WA0074.jpg" },
+                { title: "Shingle Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0080.jpg" },
+                { title: "White Rail Fence", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0090.jpg" },
+                { title: "Roof Framing Project", type: "Roof Framing", image: "/hardingallery2/IMG-20251202-WA0097.jpg" },
+                { title: "Split Rail Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0072.jpg" },
+                { title: "Roof Material Preparation", type: "Roof Materials", image: "/hardingallery2/IMG-20251202-WA0098.jpg" },
+                { title: "Quality Split Rail", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0073.jpg" },
+                { title: "New Roof Construction", type: "Roof Framing", image: "/hardingallery2/IMG-20251202-WA0099.jpg" },
+                { title: "Fence Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0076.jpg" },
+                { title: "Finished Roofing", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0100.jpg" },
+                { title: "Rail Fence Design", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0077.jpg" },
+                { title: "Completed Roof Project", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0102.jpg" },
+                { title: "Durable Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0078.jpg" },
+                { title: "Roof Installation Work", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0103.jpg" },
+                { title: "Quality Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0079.jpg" },
+                { title: "New Roofing", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0104.jpg" },
+                { title: "Residential Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0081.jpg" },
+                { title: "Roof Completion", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0105.jpg" },
+                { title: "Professional Fence Work", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0082.jpg" },
+                { title: "Custom Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0083.jpg" },
+                { title: "Expert Fencing Services", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0084.jpg" },
+                { title: "Premium Fence Work", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0085.jpg" },
+                { title: "Quality Fence Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0086.jpg" },
+                { title: "Professional Fencing Design", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0087.jpg" },
+                { title: "Reliable Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0088.jpg" },
+                { title: "Fencing Solutions", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0089.jpg" },
+                { title: "Expert Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0091.jpg" },
+                { title: "Fence Project", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0092.jpg" },
+                { title: "Wood Gate Installation", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0093.jpg" },
+                { title: "Custom Gate", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0094.jpg" },
+                { title: "Premium Gate Design", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0095.jpg" },
+                { title: "Gate Construction", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0096.jpg" },
+                { title: "Professional Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0097.jpg" },
+                { title: "Roof Work", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0098.jpg" },
+                { title: "Expert Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0099.jpg" },
+                { title: "Shingle Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0101.jpg" },
+                { title: "Roof Framing Work", type: "Roof Framing", image: "/hardingallery1/IMG-20251202-WA0102.jpg" },
+                { title: "Roofing Project", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0103.jpg" },
+                { title: "Roof Services", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0104.jpg" },
+                { title: "Complete Roof Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0105.jpg" },
+              ]
+
+              const seenImages = new Set()
+              const uniqueProjects = allProjects.filter((project) => {
+                if (seenImages.has(project.image)) return false
+                seenImages.add(project.image)
+                return true
+              })
+
+              const filteredProjects = uniqueProjects.filter((project) => activeCategory === "All" || project.type === activeCategory)
+              const displayedProjects = showAllGallery ? filteredProjects : filteredProjects.slice(0, 9)
+
+              return displayedProjects.map((project, i) => (
+                <div
+                  key={i}
+                  className="group overflow-hidden rounded-lg border-2 border-[#CD7F32] hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all"
+                >
+                  <div className="relative h-64 bg-gradient-to-br from-[#CD7F32] to-[#B8860B] overflow-hidden">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col items-center justify-end p-4">
+                      <p className="text-[#CD7F32] font-bold text-sm mb-1">{project.type}</p>
+                      <p className="text-white font-bold text-lg text-center">{project.title}</p>
+                    </div>
+                  </div>
+                </div>
+              ))
+            })()}
+          </div>
+
+          {(() => {
+            const allProjects = [
               { title: "Premium Split Rail Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0071.jpg" },
               { title: "Roof Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0075.jpg" },
               { title: "Wooden Gate", type: "Wood Gates", image: "/hardingallery2/IMG-20251202-WA0074.jpg" },
@@ -218,10 +297,8 @@ export default function HardinContracting() {
               { title: "Roof Material Preparation", type: "Roof Materials", image: "/hardingallery2/IMG-20251202-WA0098.jpg" },
               { title: "Quality Split Rail", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0073.jpg" },
               { title: "New Roof Construction", type: "Roof Framing", image: "/hardingallery2/IMG-20251202-WA0099.jpg" },
-              { title: "Residential Fence", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0074.jpg" },
-              { title: "Finished Roofing", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0100.jpg" },
               { title: "Fence Installation", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0076.jpg" },
-              { title: "Professional Roof Work", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0101.jpg" },
+              { title: "Finished Roofing", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0100.jpg" },
               { title: "Rail Fence Design", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0077.jpg" },
               { title: "Completed Roof Project", type: "Roof Installation", image: "/hardingallery2/IMG-20251202-WA0102.jpg" },
               { title: "Durable Fencing", type: "Split Rail Fencing", image: "/hardingallery1/IMG-20251202-WA0078.jpg" },
@@ -244,35 +321,37 @@ export default function HardinContracting() {
               { title: "Custom Gate", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0094.jpg" },
               { title: "Premium Gate Design", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0095.jpg" },
               { title: "Gate Construction", type: "Wood Gates", image: "/hardingallery1/IMG-20251202-WA0096.jpg" },
-              { title: "Roofing Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0097.jpg" },
+              { title: "Professional Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0097.jpg" },
               { title: "Roof Work", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0098.jpg" },
               { title: "Expert Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0099.jpg" },
-              { title: "Professional Roofing", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0100.jpg" },
               { title: "Shingle Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0101.jpg" },
               { title: "Roof Framing Work", type: "Roof Framing", image: "/hardingallery1/IMG-20251202-WA0102.jpg" },
               { title: "Roofing Project", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0103.jpg" },
               { title: "Roof Services", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0104.jpg" },
               { title: "Complete Roof Installation", type: "Roof Installation", image: "/hardingallery1/IMG-20251202-WA0105.jpg" },
-            ].filter((project) => activeCategory === "All" || project.type === activeCategory).map((project, i) => (
-              <div
-                key={i}
-                className="group overflow-hidden rounded-lg border-2 border-[#CD7F32] hover:shadow-lg hover:shadow-[#CD7F32]/50 transition-all"
-              >
-                <div className="relative h-64 bg-gradient-to-br from-[#CD7F32] to-[#B8860B] overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col items-center justify-end p-4">
-                    <p className="text-[#CD7F32] font-bold text-sm mb-1">{project.type}</p>
-                    <p className="text-white font-bold text-lg text-center">{project.title}</p>
-                  </div>
-                </div>
+            ]
+
+            const seenImages = new Set()
+            const uniqueProjects = allProjects.filter((project) => {
+              if (seenImages.has(project.image)) return false
+              seenImages.add(project.image)
+              return true
+            })
+
+            const filteredProjects = uniqueProjects.filter((project) => activeCategory === "All" || project.type === activeCategory)
+            const hasMore = filteredProjects.length > 9
+
+            return hasMore && !showAllGallery ? (
+              <div className="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center mt-4">
+                <button
+                  onClick={() => setShowAllGallery(true)}
+                  className="bg-[#CD7F32] hover:bg-[#B8860B] text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105"
+                >
+                  See More Projects
+                </button>
               </div>
-            ))}
-          </div>
+            ) : null
+          })()}
         </div>
       </section>
 
